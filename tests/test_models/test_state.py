@@ -1,19 +1,44 @@
 #!/usr/bin/python3
-""" """
+"""
+Unit tests for the Review class.
+"""
 from tests.test_models.test_base_model import test_basemodel
-from models.state import State
+from models.review import Review
 
-
-class test_state(test_basemodel):
-    """ """
+class TestReview(test_basemodel):
+    """
+    Test case for the Review class.
+    """
 
     def __init__(self, *args, **kwargs):
-        """ """
+        """
+        Initialize the test case.
+        """
         super().__init__(*args, **kwargs)
-        self.name = "State"
-        self.value = State
+        self.name = "Review"
+        self.value = Review
 
-    def test_name3(self):
-        """ """
+    def test_place_id(self):
+        """
+        Test if place_id attribute is of type str.
+        """
         new = self.value()
-        self.assertEqual(type(new.name), str)
+        self.assertEqual(type(new.place_id), str)
+
+    def test_user_id(self):
+        """
+        Test if user_id attribute is of type str.
+        """
+        new = self.value()
+        self.assertEqual(type(new.user_id), str)
+
+    def test_text(self):
+        """
+        Test if text attribute is of type str.
+        """
+        new = self.value()
+        self.assertEqual(type(new.text), str)
+
+if __name__ == "__main__":
+    unittest.main()
+
