@@ -31,7 +31,6 @@ class TestAmenityModel(test_basemodel):
 
 class TestPEP8(unittest.TestCase):
     """Test case for PEP8 compliance."""
-    
     def test_pep8_compliance(self):
         """Check PEP8 style for the Amenity module."""
         pep8style = pycodestyle.StyleGuide(quiet=True)
